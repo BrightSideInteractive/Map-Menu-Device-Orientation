@@ -1,16 +1,4 @@
 function setupMobileViewing(mor){  
-  /* android LG G3
-  portait:    0       90      180  | -180    -90     -0     beta
-  landscape 1:  0     -90+90     0   |  0      -90 flip       gamma
-  lanscape 2:   0     +90-90     0   |  0      +90 flip       gamma
-  */
-  
-  /* iphone
-  // SAMSUNG NOTE ( android )
-  portait:    0       90       0   | -0      -90     -0     beta
-  landscape 1:  0      -90    -180   | +180    150 flip       gamma
-  lanscape 2:   0      +90    +180   | -180   -150 flip       gamma
-  */
   
   window.addEventListener('deviceorientation', handleOrientation);
   window.addEventListener('orientationchange', handleOrientationChange);
