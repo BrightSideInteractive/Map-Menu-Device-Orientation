@@ -1,0 +1,166 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fa/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fa/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fa/fontawesome-webfont.woff') format('woff'), /* Modern Browsers */
+	url('../fa/fontawesome-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fa/fontawesome-webfont.svg#FontAwesome') format('svg'); /* Legacy iOS */
+	
+	
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+html, body{
+	width: 100%;
+	height:100%;
+	padding: 0;
+	margin: 0;
+}
+.table{display:table;width:100%;}
+.row{display:table-row;}
+.col{display:table-cell;}
+.vam{vertical-align:middle;}
+.h100p{height:100%;}
+
+#menu{
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:999;
+	height:100%;
+	background:rgba(60,30,2,.70);
+	padding:5px
+}
+
+.faicon{
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	font-size: 23px;
+	-webkit-text-stroke-width: .5px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-align: right;
+	line-height: normal;
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+.icon-switch:before {
+  content: "\f021";
+}
+.icon-fs:before {
+  content: "\f0b2";
+}
+.icon-map:before {
+  content: "\f00a";
+}
+
+.icon-zoomout:before {
+  content: "\f146";
+}
+.icon-zoomin:before {
+  content: "\f0fe";
+}
+
+#menu .menu_item{
+	display:block;
+	padding:20%;
+	cursor: pointer;
+}
+
+#menu .menu_item .faicon{
+	color: #eee;
+}
+
+#menu .menu_item:hover, #menu .menu_item.active{
+	background:rgba(255,255,255,.2);
+}
+#menu .menu_item:hover .faicon{
+	color: #fff;
+}
+
+.tool_tip_animation{
+	position:fixed;
+	top:0;
+	right:5%;
+	z-index:999;
+	height:100%;
+	pointer-events: none;
+	-webkit-animation: tooltipanimate 3s; /* Chrome, Safari, Opera */
+	animation: tooltipanimate 3s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes tooltipanimate {
+    0%   {right:5%; }
+    25%  {right:8%;}
+	50% {right:5%; }
+	75% {right:8%;}
+}
+
+/* Standard syntax */
+@keyframes tooltipanimate {
+    0%   {right:5%; }
+    25%  {right:8%;}
+	50% {right:5%; }
+	75% {right:8%;}
+}
+
+.tip{
+  display:block;
+  padding:5px;
+  color: #FFFFFF;
+  float: right;
+  font:Helvetica, Arial, sans-serif;
+}
+
+.tip:after {
+  content: "\f061";
+}
+
+.fullscreen-tip{
+  padding: 8px 0 0 0;
+}
+
+.map-tip{
+  padding: 0 0 5px 0;
+}
+
+#map_wrapper{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+	background: rgba(60,30,2,.65);
+	position: fixed;
+}
+
+.map-links{
+	color: rgba(60,30,2);
+	opacity:0;
+	
+}
+
+#map_menu{
+	padding-top: 5%;
+	display:block;
+	position: relative;
+	width:70%;
+	margin-left: auto;
+	margin-right: auto;
+	left:10%;
+	z-index: 950;
+}
+
+@media only screen and (max-width : 800px) {
+
+	.tool_tip_animation{
+	display: none;
+	}
+}
